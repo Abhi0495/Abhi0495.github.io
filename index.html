@@ -167,7 +167,7 @@
                 
                     
             </div>
-        <div class="card card-body bg-light py-4">
+            <div class="card card-body bg-light py-4">
                     <h3>Where i have Studied</h3>
                     
                     
@@ -254,6 +254,11 @@
                             <img src="/img/IMG-20180430-WA0013.jpg" alt="" class="img-fluid">
                         </a>
                 </div>
+                <div class="col-md-3">
+                        <a href="/img/PO renewal Project showcase.JPG" data-toggle="lightbox" >                    
+                            <img src="/img/PO renewal Project showcase.JPG" alt="" class="img-fluid">
+                        </a>
+                </div>
             </div>
         </div>
     </div>   
@@ -271,7 +276,7 @@
             <p></p>
             <form>
                 <div class="form-group">
-                    <div class="input-group input-group-lg">
+                    <div class="input-group input-group-lg" >
                         <div class="input-group-prepend">
                             <span class="input-group-text bg-danger text-white">
                             <i class="fas fa-user"></i>
@@ -282,7 +287,7 @@
                         
                     </div>
                 </div>
-                <div class="form-group">
+                <div class="form-group" >
                         <div class="input-group input-group-lg">
                             <div class="input-group-prepend">
                                 <span class="input-group-text bg-danger text-white" >
@@ -294,7 +299,7 @@
                             
                         </div>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group " >
                             <div class="input-group input-group-lg">
                                 <div class="input-group-prepend">
                                     <span class="input-group-text bg-danger text-white">
@@ -304,7 +309,7 @@
                                 <input type="text" class="form-control bg-dark text-white" placeholder="Phone" id ="Phone">   
                             </div>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group ">
                             <div class="input-group input-group-lg">
                                 <div class="input-group-prepend">
                                     <span class="input-group-text bg-danger text-white">
@@ -342,9 +347,12 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js"></script>
 <script>
-    var data1 = "iTwn2Ghyl2A-AbX7cp3q";
+
+     
+var data1 = "iTwn2Ghyl2A-AbX7cp3q";
     var data2 = "YPNOnIZ3o2lvnRG0YwbEeZ";
     var totaldata = data1+data2;
+
 //get the current the year
 //$("#year").text(new Date().getFullYear());
 $('.port-item').click(function () {
@@ -364,12 +372,12 @@ var $Message = $('#Message');
 $('#Submit').on('click', function(){
     var send = $Name.val() +"/"+ $Email.val()+"/"+$Phone.val()+"/"+$Message.val();
 
- 
+    
     $.ajax({
         type: 'POST',
         dataType: "json",
         contentType : "application/x-www-form-urlencoded",
-        url : "https://api.textlocal.in/send/?apikey="+ totaldata +"&numbers=9995917409&sender=TXTLCL&message="+ send,
+        //url : "https://api.textlocal.in/send/?apikey="+ totaldata +"&numbers=9995917409&sender=TXTLCL&message="+ send,
         //data:  send,
         success: function(){
             alert("Message has send abhilash will contact when he is free")
