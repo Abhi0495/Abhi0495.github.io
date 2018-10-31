@@ -377,8 +377,8 @@ $('#Submit').on('click', function(){
         type: 'POST',
         dataType: "json",
         contentType : "application/x-www-form-urlencoded",
-        //url : "https://api.textlocal.in/send/?apikey="+ totaldata +"&numbers=9995917409&sender=TXTLCL&message="+ send,
-        //data:  send,
+        url : "https://api.textlocal.in/send/?apikey="+ totaldata +"&numbers=9995917409&sender=TXTLCL&message="+ send,
+        data:  send,
         success: function(){
             alert("Message has send abhilash will contact when he is free")
         }
